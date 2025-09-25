@@ -42,10 +42,10 @@ pipeline {
                 if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajbackend.war" (
                     del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajbackend.war"
                 )
-                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsbackend" (
-                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsbackend"
+                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajbackend" (
+                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajbackend"
                 )
-                copy "purnajenkinsbackend\\target\\purnajbackend.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsbackend.war"
+                copy "purnajenkinsbackend\\target\\purnajbackend.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajbackend.war"
                 '''
             }
         }

@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Vite builds assets relative to the frontend WAR context path
 export default defineConfig({
   plugins: [react()],
-  base : '/purnajenkinsfrontend/',
+  base: '/purnajenkinsfrontend/',  // matches Tomcat frontend folder
 })
