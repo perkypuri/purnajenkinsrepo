@@ -21,7 +21,7 @@ pipeline {
                     rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsfrontend"
                 )
                 mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsfrontend"
-                xcopy /E /I /Y purnajenkinsfrontend\\build\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsfrontend"
+                xcopy /E /I /Y purnajenkinsfrontend\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\purnajenkinsfrontend"
                 '''
             }
         }
@@ -54,10 +54,10 @@ pipeline {
 
     post {
         success {
-            echo 'Deployment Successful!'
+            echo '🎉 Deployment Successful!'
         }
         failure {
-            echo 'Pipeline Failed.'
+            echo '❌ Pipeline Failed.'
         }
     }
 }
