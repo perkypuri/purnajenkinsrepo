@@ -50,54 +50,70 @@ const UserManager = () => {
 
   return (
     <div className="user-manager">
-      {/* CSS inside component */}
+      {/* Updated CSS */}
       <style>{`
         .user-manager {
-          padding: 20px;
-          max-width: 600px;
-          margin: 30px auto;
-          background: #f9f9f9;
-          border-radius: 12px;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-          font-family: Arial, sans-serif;
+          padding: 30px;
+          max-width: 700px;
+          margin: 40px auto;
+          background: #ffffff;
+          border-radius: 16px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: #333;
         }
 
         .user-manager h2 {
           text-align: center;
-          color: #333;
-          margin-bottom: 20px;
+          font-size: 28px;
+          margin-bottom: 25px;
+          color: #222;
         }
 
         .user-form {
           display: flex;
-          gap: 10px;
-          margin-bottom: 20px;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-bottom: 30px;
         }
 
         .user-form input {
-          flex: 1;
-          padding: 10px;
-          border: 1px solid #ddd;
-          border-radius: 6px;
+          flex: 1 1 200px;
+          padding: 12px 14px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
           outline: none;
+          font-size: 16px;
+          transition: all 0.2s;
         }
 
         .user-form input:focus {
           border-color: #007bff;
+          box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
         }
 
         .user-form button {
-          padding: 10px 16px;
+          padding: 12px 20px;
           border: none;
           background: #007bff;
           color: white;
-          border-radius: 6px;
+          border-radius: 10px;
           cursor: pointer;
-          transition: background 0.2s;
+          font-size: 16px;
+          transition: all 0.2s;
         }
 
         .user-form button:hover {
           background: #0056b3;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+          margin-bottom: 15px;
+          font-size: 22px;
+          color: #444;
+          text-align: center;
         }
 
         .user-list {
@@ -109,30 +125,40 @@ const UserManager = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background: white;
-          padding: 10px 12px;
-          margin-bottom: 8px;
-          border-radius: 6px;
-          border: 1px solid #eee;
+          background: #f7f7f7;
+          padding: 12px 16px;
+          margin-bottom: 12px;
+          border-radius: 12px;
+          border: 1px solid #e0e0e0;
+          transition: all 0.2s;
+        }
+
+        .user-list li:hover {
+          background: #e9f2ff;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
 
         .user-list li span {
           font-weight: 500;
-          color: #333;
+          font-size: 16px;
         }
 
         .delete-btn {
           background: #dc3545;
           color: white;
           border: none;
-          padding: 6px 12px;
-          border-radius: 6px;
+          padding: 8px 16px;
+          border-radius: 8px;
           cursor: pointer;
-          transition: background 0.2s;
+          font-size: 14px;
+          transition: all 0.2s;
         }
 
         .delete-btn:hover {
           background: #a71d2a;
+          transform: translateY(-2px);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
       `}</style>
 
