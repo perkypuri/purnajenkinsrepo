@@ -50,7 +50,6 @@ const UserManager = () => {
 
   return (
     <div className="user-manager">
-      {/* Updated CSS */}
       <style>{`
         .user-manager {
           padding: 30px;
@@ -75,6 +74,7 @@ const UserManager = () => {
           flex-wrap: wrap;
           gap: 12px;
           margin-bottom: 30px;
+          align-items: center;
         }
 
         .user-form input {
@@ -93,6 +93,7 @@ const UserManager = () => {
         }
 
         .user-form button {
+          flex: 0 0 auto;
           padding: 12px 20px;
           border: none;
           background: #007bff;
